@@ -26,7 +26,7 @@ const login = async (req, res, next) => {
 
         res
           .cookie("token", token, {
-            httpOnly: true,
+            httpOnly: false,
           })
           .json({
             message: "login successful",
