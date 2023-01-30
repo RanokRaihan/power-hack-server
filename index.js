@@ -14,7 +14,12 @@ const authRouter = require("./router/authRouter");
 const errorHandler = require("./middleware/errorHandler");
 //init app
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://power-hack-ranok.web.app", "https://power-hack-ranok.firebaseapp.com"],
+    credentials: true,
+  })
+);
 //config environment variable
 dotenv.config();
 
