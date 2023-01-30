@@ -14,12 +14,7 @@ const authRouter = require("./router/authRouter");
 const errorHandler = require("./middleware/errorHandler");
 //init app
 const app = express();
-app.use(
-  cors({
-    origin: ["http://localhost:3000"],
-    credentials: true,
-  })
-);
+app.use(cors());
 //config environment variable
 dotenv.config();
 
